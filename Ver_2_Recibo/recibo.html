@@ -1,0 +1,231 @@
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vivo Cable</title>
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    color: #000;
+  }
+
+  .recibo {
+    width: 8.5in;
+    height: 11in;
+    margin: 0 auto;
+    padding: 1in;
+    color: #000;
+  }
+
+  .recibo-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0.5in;
+    color: #000;
+  }
+  .info-cliente p {
+    text-align: right;
+    margin: 0;
+  }
+  .vivo-logo img {
+    width: 250px;
+    height: auto;
+  }
+  .recibo-header h1 {
+    margin: 0;
+  }
+
+  .recibo-info {
+      justify-content: space-between;
+      display: flex;
+    margin-bottom: 0.3in;
+  }
+
+  .codigo-barra img{
+      width: 400px;
+  }
+  .recibo-info p {
+    margin: 0;
+  }
+
+  .recibo-items {
+    margin-bottom: 0.1in;
+  }
+
+  .recibo-items table {
+    width: 100%; /* Reducir el ancho de la tabla */
+    margin: 0 auto; /* Centrar la tabla */
+    border-collapse: collapse;
+  }
+
+  .recibo-items th,
+  .recibo-items td {
+    padding: 8px; /* Reducir el padding para hacer las celdas más pequeñas */
+    border: 1px solid #e7e7e7;
+    font-size: 0.8em; /* Reducir el tamaño de la fuente */
+  }
+
+  .recibo-total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .recibo-footer {
+    display: flex;
+    justify-content: space-between; /* Centra las columnas */
+    margin-top: 30px;
+    text-align: center; /* Alinea el texto al centro */
+  }
+  .footer-row {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+  .icon{
+    width: 20px;
+    height: 20px;
+}
+  .description {
+    font-weight: bold; /* Hace el texto de la descripción más grueso */
+  }
+
+  .info-bancaria-anunciante {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.3in;
+  }
+  .info-bancaria {
+    width: 30%;
+    margin-left: 40px;
+  }
+  .anunciante {
+    margin-right: 80px;  
+    width: 40%;
+    text-align: right;
+  }
+  .info-bancaria img {
+    width: 100%; /* Ajusta el logo del banco para que ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  .anunciante img {
+    width: 100%; /* Ajusta la imagen del anunciante para que ocupe todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+</style>
+<body>
+  <div class="recibo">
+    <div class="recibo-header">
+      <div class="vivo-logo">
+        <img src="../src/assets/recibos_img/vivoCAble-logo.png" alt="vivo-logo" />
+      </div>
+      <div class="info-cliente">
+        <p>Mes de facturación: ${infoContrato.fecha_contrato}</p>
+        <p>Número cliente: ${estadoCuentaInfo.id}</p>
+        <p>Total a pagar:  ${estadoCuentaInfo.monto_pago}</p>
+        <p>Pagar antes de: ${estadoCuentaInfo.fecha_limite}</p>
+      </div>
+    </div>
+
+    <div class="recibo-info">
+      <div class="datos-cliente">
+      <p><h4>${estadoCuentaInfo?.contrato?.cliente?.nombre}
+          ${estadoCuentaInfo?.contrato?.cliente?.apellido_paterno}
+          ${estadoCuentaInfo?.contrato?.cliente?.apellido_materno}
+      </h4></p>
+        <p>${estadoCuentaInfo?.contrato?.cliente?.calle}, 
+          ${estadoCuentaInfo?.contrato?.cliente?.num_ext}
+          ${estadoCuentaInfo?.contrato?.cliente?.num_int}
+      </p>
+        <p>${estadoCuentaInfo?.contrato?.cliente?.colonia}</p>
+        <p>${estadoCuentaInfo?.contrato?.cliente?.estado}
+          ${estadoCuentaInfo?.contrato?.cliente?.delegacion}
+        </p>
+        <p>${estadoCuentaInfo?.contrato?.cliente?.cp}</p>
+      </div>
+      <div class="codigo-barra">
+          <img src="../src/assets/recibos_img/codigo-barra.png" alt="">
+      </div>
+    </div>
+
+    <div class="recibo-items">
+      <h2>Estado de cuenta</h2>
+      <br />
+      <table>
+        <tbody>
+          <tr>
+            <td>Servicio Actual</td>
+            <td>{Nombre servicio}</td>
+          </tr>
+          <tr>
+            <td>Cargo del mes</td>
+            <td>${estadoCuentaInfo.monto_pago}</td>00
+          </tr>
+          <tr>
+            <td>Cargos adicionales</td>
+            <td>{Cargos}</td>
+          </tr>
+          <tr>
+            <td>Sub-total</td>
+            <td>{Nombre servicio}</td>
+          </tr>
+          <tr>
+            <td>IVA</td>
+            <td>16%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="recibo-total">
+      <p>Total: $ ${estadoCuentaInfo.monto_pago}</p>
+    </div>
+
+    <!-- Contenido del recibo aquí -->
+
+    <div class="info-bancaria-anunciante">
+      <div class="anunciante">
+        <!-- Asumiendo que tienes la imagen promocional, reemplaza 'ruta_imagen_anunciante.png' con la ruta real de tu imagen -->
+        <img src="../src/assets/recibos_img/anunciate.png" alt="Anunciante" />
+      </div>
+      <div class="info-bancaria">
+        <h3>Realiza tu pago mediante</h3>
+        <h3>Transferencia bancaria</h3>
+        <h3>Clave:</h3>
+        <h4> 0724 2001 0079 5867 97</h4>
+        <br />
+        <img src="../src/assets/recibos_img/banorte.png" alt="Logo del Banco" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="recibo-footer">
+      <div class="footer-row">
+          <img class="icon" src="../src/assets/recibos_img/telefono.png" alt="telefono" >          
+          <p class="description">Teléfono:</p>
+        <p>123-456-7890</p>
+      </div>
+      <div class="footer-row">
+          <img class="icon" src="../src/assets/recibos_img/whatsapp.png" alt="telefono" >          
+        <p class="description">WhatsApp:</p>
+        <p>123-456-7890</p>
+      </div>
+      <div class="footer-row">
+          <img class="icon" src="../src/assets/recibos_img/correo.png" alt="telefono" >          
+        <p class="description">Correo:</p>
+        <p>contacto@vivocable.com</p>
+      </div>
+      <div class="footer-row">
+          <img class="icon" src="../src/assets/recibos_img/web.png" alt="telefono" >          
+        <p class="description">Web:</p>
+        <p>www.vivocable.com</p>
+      </div>
+    </div>
+  </div>
+</body>
+

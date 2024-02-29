@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!-- Created by pdf2htmlEX (https://github.com/pdf2htmlEX/pdf2htmlEX) -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta name="generator" content="pdf2htmlEX"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<style type="text/css">
+/*! 
+ * Base CSS for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/pdf2htmlEX/pdf2htmlEX/blob/master/share/LICENSE
+ */#sidebar{position:absolute;top:0;left:0;bottom:0;width:250px;padding:0;margin:0;overflow:auto}#page-container{position:absolute;top:0;left:0;margin:0;padding:0;border:0}@media screen{#sidebar.opened+#page-container{left:250px}#page-container{bottom:0;right:0;overflow:auto}.loading-indicator{display:none}.loading-indicator.active{display:block;position:absolute;width:64px;height:64px;top:50%;left:50%;margin-top:-32px;margin-left:-32px}.loading-indicator img{position:absolute;top:0;left:0;bottom:0;right:0}}@media print{@page{margin:0}html{margin:0}body{margin:0;-webkit-print-color-adjust:exact}#sidebar{display:none}#page-container{width:auto;height:auto;overflow:visible;background-color:transparent}.d{display:none}}.pf{position:relative;background-color:white;overflow:hidden;margin:0;border:0}.pc{position:absolute;border:0;padding:0;margin:0;top:0;left:0;width:100%;height:100%;overflow:hidden;display:block;transform-origin:0 0;-ms-transform-origin:0 0;-webkit-transform-origin:0 0}.pc.opened{display:block}.bf{position:absolute;border:0;margin:0;top:0;bottom:0;width:100%;height:100%;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.bi{position:absolute;border:0;margin:0;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}@media print{.pf{margin:0;box-shadow:none;page-break-after:always;page-break-inside:avoid}@-moz-document url-prefix(){.pf{overflow:visible;border:1px solid #fff}.pc{overflow:visible}}}.c{position:absolute;border:0;padding:0;margin:0;overflow:hidden;display:block}.t{position:absolute;white-space:pre;font-size:1px;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%;unicode-bidi:bidi-override;-moz-font-feature-settings:"liga" 0}.t:after{content:''}.t:before{content:'';display:inline-block}.t span{position:relative;unicode-bidi:bidi-override}._{display:inline-block;color:transparent;z-index:-1}::selection{background:rgba(127,255,255,0.4)}::-moz-selection{background:rgba(127,255,255,0.4)}.pi{display:none}.d{position:absolute;transform-origin:0 100%;-ms-transform-origin:0 100%;-webkit-transform-origin:0 100%}.it{border:0;background-color:rgba(255,255,255,0.0)}.ir:hover{cursor:pointer}</style>
+<style type="text/css">
+/*! 
+ * Fancy styles for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/pdf2htmlEX/pdf2htmlEX/blob/master/share/LICENSE
+ */@keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@keyframes swing{0{transform:rotate(0)}10%{transform:rotate(0)}90%{transform:rotate(720deg)}100%{transform:rotate(720deg)}}@-webkit-keyframes swing{0{-webkit-transform:rotate(0)}10%{-webkit-transform:rotate(0)}90%{-webkit-transform:rotate(720deg)}100%{-webkit-transform:rotate(720deg)}}@media screen{#sidebar{background-color:#2f3236;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjNDAzYzNmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMNCA0Wk00IDBMMCA0WiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9IiMxZTI5MmQiPjwvcGF0aD4KPC9zdmc+")}#outline{font-family:Georgia,Times,"Times New Roman",serif;font-size:13px;margin:2em 1em}#outline ul{padding:0}#outline li{list-style-type:none;margin:1em 0}#outline li>ul{margin-left:1em}#outline a,#outline a:visited,#outline a:hover,#outline a:active{line-height:1.2;color:#e8e8e8;text-overflow:ellipsis;white-space:nowrap;text-decoration:none;display:block;overflow:hidden;outline:0}#outline a:hover{color:#0cf}#page-container{background-color:#9e9e9e;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjOWU5ZTllIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IDRMNCA2Wk0tMSAxTDEgLTFaIiBzdHJva2U9IiM4ODgiIHN0cm9rZS13aWR0aD0iMSI+PC9wYXRoPgo8L3N2Zz4=");-webkit-transition:left 500ms;transition:left 500ms}.pf{margin:13px auto;box-shadow:1px 1px 3px 1px #333;border-collapse:separate}.pc.opened{-webkit-animation:fadein 100ms;animation:fadein 100ms}.loading-indicator.active{-webkit-animation:swing 1.5s ease-in-out .01s infinite alternate none;animation:swing 1.5s ease-in-out .01s infinite alternate none}.checked{background:no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goQDSYgDiGofgAAAslJREFUOMvtlM9LFGEYx7/vvOPM6ywuuyPFihWFBUsdNnA6KLIh+QPx4KWExULdHQ/9A9EfUodYmATDYg/iRewQzklFWxcEBcGgEplDkDtI6sw4PzrIbrOuedBb9MALD7zv+3m+z4/3Bf7bZS2bzQIAcrmcMDExcTeXy10DAFVVAQDksgFUVZ1ljD3yfd+0LOuFpmnvVVW9GHhkZAQcxwkNDQ2FSCQyRMgJxnVdy7KstKZpn7nwha6urqqfTqfPBAJAuVymlNLXoigOhfd5nmeiKL5TVTV+lmIKwAOA7u5u6Lped2BsbOwjY6yf4zgQQkAIAcedaPR9H67r3uYBQFEUFItFtLe332lpaVkUBOHK3t5eRtf1DwAwODiIubk5DA8PM8bYW1EU+wEgCIJqsCAIQAiB7/u253k2BQDDMJBKpa4mEon5eDx+UxAESJL0uK2t7XosFlvSdf0QAEmlUnlRFJ9Waho2Qghc1/U9z3uWz+eX+Wr+lL6SZfleEAQIggA8z6OpqSknimIvYyybSCReMsZ6TislhCAIAti2Dc/zejVNWwCAavN8339j27YbTg0AGGM3WltbP4WhlRWq6Q/btrs1TVsYHx+vNgqKoqBUKn2NRqPFxsbGJzzP05puUlpt0ukyOI6z7zjOwNTU1OLo6CgmJyf/gA3DgKIoWF1d/cIY24/FYgOU0pp0z/Ityzo8Pj5OTk9PbwHA+vp6zWghDC+VSiuRSOQgGo32UErJ38CO42wdHR09LBQK3zKZDDY2NupmFmF4R0cHVlZWlmRZ/iVJUn9FeWWcCCE4ODjYtG27Z2Zm5juAOmgdGAB2d3cBADs7O8uSJN2SZfl+WKlpmpumaT6Yn58vn/fs6XmbhmHMNjc3tzDGFI7jYJrm5vb29sDa2trPC/9aiqJUy5pOp4f6+vqeJ5PJBAB0dnZe/t8NBajx/z37Df5OGX8d13xzAAAAAElFTkSuQmCC)}}</style>
+<style type="text/css">
+.ff0{font-family:sans-serif;visibility:hidden;}
+@font-face{font-family:ff1;src:url(f1.woff)format("woff");}.ff1{font-family:ff1;line-height:1.002930;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url(f2.woff)format("woff");}.ff2{font-family:ff2;line-height:0.835938;font-style:normal;font-weight:normal;visibility:visible;}
+.m0{transform:matrix(0.125000,0.000000,0.000000,0.125000,0,0);-ms-transform:matrix(0.125000,0.000000,0.000000,0.125000,0,0);-webkit-transform:matrix(0.125000,0.000000,0.000000,0.125000,0,0);}
+.v0{vertical-align:0.000000px;}
+.ls0{letter-spacing:-1.914000px;}
+.lsd{letter-spacing:-1.856000px;}
+.ls5{letter-spacing:-1.619200px;}
+.lsc{letter-spacing:-1.584000px;}
+.ls16{letter-spacing:-1.536000px;}
+.ls7{letter-spacing:-1.430000px;}
+.ls18{letter-spacing:-1.392000px;}
+.ls6{letter-spacing:-0.422400px;}
+.ls2{letter-spacing:-0.336000px;}
+.lsa{letter-spacing:-0.096000px;}
+.ls10{letter-spacing:0.000000px;}
+.lse{letter-spacing:0.064000px;}
+.ls12{letter-spacing:0.066000px;}
+.ls9{letter-spacing:0.096000px;}
+.ls3{letter-spacing:0.110000px;}
+.ls15{letter-spacing:0.240000px;}
+.ls17{letter-spacing:0.513600px;}
+.ls4{letter-spacing:0.541200px;}
+.ls1{letter-spacing:0.550000px;}
+.lsf{letter-spacing:0.624000px;}
+.ls11{letter-spacing:0.864000px;}
+.ls8{letter-spacing:1.254000px;}
+.ls13{letter-spacing:1.694000px;}
+.ls14{letter-spacing:1.934400px;}
+.lsb{letter-spacing:1.968000px;}
+.sc_{text-shadow:none;}
+.sc0{text-shadow:-0.015em 0 transparent,0 0.015em transparent,0.015em 0 transparent,0 -0.015em  transparent;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sc_{-webkit-text-stroke:0px transparent;}
+.sc0{-webkit-text-stroke:0.015em transparent;text-shadow:none;}
+}
+.ws0{word-spacing:0.000000px;}
+._6{margin-left:-3.784000px;}
+._4{margin-left:-2.508000px;}
+._3{margin-left:-1.056000px;}
+._1{width:1.012000px;}
+._0{width:2.464000px;}
+._2{width:4.180000px;}
+._5{width:420.952000px;}
+.fc4{color:rgb(255,0,0);}
+.fc3{color:rgb(0,112,192);}
+.fc0{color:rgb(0,0,0);}
+.fc2{color:rgb(5,99,193);}
+.fc1{color:rgb(68,114,196);}
+.fs3{font-size:32.000000px;}
+.fs0{font-size:44.000000px;}
+.fs1{font-size:48.000000px;}
+.fs2{font-size:64.000000px;}
+.fs4{font-size:72.000000px;}
+.y0{bottom:-0.250000px;}
+.ya{bottom:1.500000px;}
+.y8{bottom:2.000000px;}
+.y18{bottom:2.500000px;}
+.y20{bottom:3.000000px;}
+.y15{bottom:4.500000px;}
+.yf{bottom:5.000000px;}
+.y19{bottom:5.500000px;}
+.y7{bottom:30.500000px;}
+.y1{bottom:49.000000px;}
+.y25{bottom:57.000000px;}
+.y26{bottom:85.500000px;}
+.y14{bottom:99.500000px;}
+.y6{bottom:108.500000px;}
+.y21{bottom:141.500000px;}
+.y22{bottom:156.000000px;}
+.y24{bottom:163.000000px;}
+.y23{bottom:170.000000px;}
+.y17{bottom:198.500000px;}
+.y16{bottom:206.000000px;}
+.y10{bottom:214.500000px;}
+.y11{bottom:222.000000px;}
+.y12{bottom:229.500000px;}
+.y13{bottom:237.000000px;}
+.y1a{bottom:244.500000px;}
+.y1f{bottom:252.000000px;}
+.y1e{bottom:271.000000px;}
+.y1d{bottom:278.000000px;}
+.y1c{bottom:285.000000px;}
+.y5{bottom:286.500000px;}
+.y1b{bottom:292.000000px;}
+.y4{bottom:293.500000px;}
+.ye{bottom:299.000000px;}
+.y3{bottom:300.500000px;}
+.y2{bottom:307.500000px;}
+.yd{bottom:334.000000px;}
+.yc{bottom:341.000000px;}
+.yb{bottom:348.000000px;}
+.y9{bottom:355.000000px;}
+.h5{height:6.500000px;}
+.h7{height:7.000000px;}
+.hb{height:11.000000px;}
+.h6{height:13.500000px;}
+.hd{height:14.000000px;}
+.ha{height:14.500000px;}
+.h9{height:26.390625px;}
+.h3{height:36.287109px;}
+.h4{height:39.585938px;}
+.h8{height:52.781250px;}
+.hc{height:59.378906px;}
+.h2{height:319.500000px;}
+.h0{height:396.000000px;}
+.h1{height:396.250000px;}
+.wc{width:41.000000px;}
+.w8{width:43.500000px;}
+.wb{width:47.500000px;}
+.w5{width:83.000000px;}
+.w3{width:91.500000px;}
+.w9{width:100.000000px;}
+.w4{width:124.000000px;}
+.wa{width:144.000000px;}
+.w7{width:168.000000px;}
+.w6{width:175.000000px;}
+.w2{width:269.000000px;}
+.w0{width:306.000000px;}
+.w1{width:306.250000px;}
+.x0{left:0.000000px;}
+.xc{left:7.000000px;}
+.x1{left:9.500000px;}
+.x12{left:13.500000px;}
+.xd{left:22.000000px;}
+.x10{left:32.000000px;}
+.xf{left:35.000000px;}
+.x9{left:38.500000px;}
+.x6{left:46.500000px;}
+.xa{left:50.500000px;}
+.x8{left:57.000000px;}
+.x7{left:60.500000px;}
+.xb{left:69.000000px;}
+.x4{left:84.000000px;}
+.x11{left:92.500000px;}
+.x5{left:134.000000px;}
+.x3{left:145.500000px;}
+.xe{left:178.000000px;}
+.x2{left:217.500000px;}
+@media print{
+.v0{vertical-align:0.000000pt;}
+.ls0{letter-spacing:-5.104000pt;}
+.lsd{letter-spacing:-4.949333pt;}
+.ls5{letter-spacing:-4.317867pt;}
+.lsc{letter-spacing:-4.224000pt;}
+.ls16{letter-spacing:-4.096000pt;}
+.ls7{letter-spacing:-3.813333pt;}
+.ls18{letter-spacing:-3.712000pt;}
+.ls6{letter-spacing:-1.126400pt;}
+.ls2{letter-spacing:-0.896000pt;}
+.lsa{letter-spacing:-0.256000pt;}
+.ls10{letter-spacing:0.000000pt;}
+.lse{letter-spacing:0.170667pt;}
+.ls12{letter-spacing:0.176000pt;}
+.ls9{letter-spacing:0.256000pt;}
+.ls3{letter-spacing:0.293333pt;}
+.ls15{letter-spacing:0.640000pt;}
+.ls17{letter-spacing:1.369600pt;}
+.ls4{letter-spacing:1.443200pt;}
+.ls1{letter-spacing:1.466667pt;}
+.lsf{letter-spacing:1.664000pt;}
+.ls11{letter-spacing:2.304000pt;}
+.ls8{letter-spacing:3.344000pt;}
+.ls13{letter-spacing:4.517333pt;}
+.ls14{letter-spacing:5.158400pt;}
+.lsb{letter-spacing:5.248000pt;}
+.ws0{word-spacing:0.000000pt;}
+._6{margin-left:-10.090667pt;}
+._4{margin-left:-6.688000pt;}
+._3{margin-left:-2.816000pt;}
+._1{width:2.698667pt;}
+._0{width:6.570667pt;}
+._2{width:11.146667pt;}
+._5{width:1122.538667pt;}
+.fs3{font-size:85.333333pt;}
+.fs0{font-size:117.333333pt;}
+.fs1{font-size:128.000000pt;}
+.fs2{font-size:170.666667pt;}
+.fs4{font-size:192.000000pt;}
+.y0{bottom:-0.666667pt;}
+.ya{bottom:4.000000pt;}
+.y8{bottom:5.333333pt;}
+.y18{bottom:6.666667pt;}
+.y20{bottom:8.000000pt;}
+.y15{bottom:12.000000pt;}
+.yf{bottom:13.333333pt;}
+.y19{bottom:14.666667pt;}
+.y7{bottom:81.333333pt;}
+.y1{bottom:130.666667pt;}
+.y25{bottom:152.000000pt;}
+.y26{bottom:228.000000pt;}
+.y14{bottom:265.333333pt;}
+.y6{bottom:289.333333pt;}
+.y21{bottom:377.333333pt;}
+.y22{bottom:416.000000pt;}
+.y24{bottom:434.666667pt;}
+.y23{bottom:453.333333pt;}
+.y17{bottom:529.333333pt;}
+.y16{bottom:549.333333pt;}
+.y10{bottom:572.000000pt;}
+.y11{bottom:592.000000pt;}
+.y12{bottom:612.000000pt;}
+.y13{bottom:632.000000pt;}
+.y1a{bottom:652.000000pt;}
+.y1f{bottom:672.000000pt;}
+.y1e{bottom:722.666667pt;}
+.y1d{bottom:741.333333pt;}
+.y1c{bottom:760.000000pt;}
+.y5{bottom:764.000000pt;}
+.y1b{bottom:778.666667pt;}
+.y4{bottom:782.666667pt;}
+.ye{bottom:797.333333pt;}
+.y3{bottom:801.333333pt;}
+.y2{bottom:820.000000pt;}
+.yd{bottom:890.666667pt;}
+.yc{bottom:909.333333pt;}
+.yb{bottom:928.000000pt;}
+.y9{bottom:946.666667pt;}
+.h5{height:17.333333pt;}
+.h7{height:18.666667pt;}
+.hb{height:29.333333pt;}
+.h6{height:36.000000pt;}
+.hd{height:37.333333pt;}
+.ha{height:38.666667pt;}
+.h9{height:70.375000pt;}
+.h3{height:96.765625pt;}
+.h4{height:105.562500pt;}
+.h8{height:140.750000pt;}
+.hc{height:158.343750pt;}
+.h2{height:852.000000pt;}
+.h0{height:1056.000000pt;}
+.h1{height:1056.666667pt;}
+.wc{width:109.333333pt;}
+.w8{width:116.000000pt;}
+.wb{width:126.666667pt;}
+.w5{width:221.333333pt;}
+.w3{width:244.000000pt;}
+.w9{width:266.666667pt;}
+.w4{width:330.666667pt;}
+.wa{width:384.000000pt;}
+.w7{width:448.000000pt;}
+.w6{width:466.666667pt;}
+.w2{width:717.333333pt;}
+.w0{width:816.000000pt;}
+.w1{width:816.666667pt;}
+.x0{left:0.000000pt;}
+.xc{left:18.666667pt;}
+.x1{left:25.333333pt;}
+.x12{left:36.000000pt;}
+.xd{left:58.666667pt;}
+.x10{left:85.333333pt;}
+.xf{left:93.333333pt;}
+.x9{left:102.666667pt;}
+.x6{left:124.000000pt;}
+.xa{left:134.666667pt;}
+.x8{left:152.000000pt;}
+.x7{left:161.333333pt;}
+.xb{left:184.000000pt;}
+.x4{left:224.000000pt;}
+.x11{left:246.666667pt;}
+.x5{left:357.333333pt;}
+.x3{left:388.000000pt;}
+.xe{left:474.666667pt;}
+.x2{left:580.000000pt;}
+}
+</style>
+<script src="compatibility.min.js"></script>
+<script src="pdf2htmlEX.min.js"></script>
+<script>
+try{
+pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
+}catch(e){}
+</script>
+<title></title>
+</head>
+<body>
+<div id="sidebar">
+<div id="outline">
+</div>
+</div>
+<div id="page-container">
+<div id="pf1" class="pf w0 h0" data-page-no="1"><div class="pc pc1 w0 h0"><img class="bi x0 y0 w1 h1" alt="" src="bg1.png"/><div class="c x1 y1 w2 h2"><div class="t m0 x2 h3 y2 ff1 fs0 fc0 sc0 ls0 ws0">#MES<span class="_ _0"></span>,<span class="_ _0"></span> #AÑ<span class="_ _0"></span>O</div><div class="t m0 x2 h3 y3 ff1 fs0 fc0 sc0 ls0 ws0">#N<span class="_ _0"></span>ÚM<span class="_ _1"></span>ER<span class="_ _0"></span>O C<span class="_ _0"></span>L<span class="_ _2"></span>I<span class="_ _0"></span>EN<span class="_ _0"></span>TE</div><div class="t m0 x2 h3 y4 ff1 fs0 fc0 sc0 ls0 ws0">#C<span class="_ _0"></span>AN<span class="_ _1"></span>T<span class="_ _1"></span>I<span class="_ _0"></span>D<span class="_ _2"></span>AD</div><div class="t m0 x2 h3 y5 ff1 fs0 fc0 sc0 ls0 ws0">#D<span class="_ _0"></span>D<span class="_ _0"></span>/<span class="_ _1"></span>M<span class="_ _1"></span>M/<span class="_ _1"></span>AA<span class="_ _1"></span>AA</div><div class="t m0 x3 h3 y6 ff1 fs0 fc0 sc0 ls1 ws0">CLA<span class="_ _3"></span>BE<span class="_ _4"></span>:</div><div class="t m0 x4 h4 y7 ff2 fs1 fc1 sc0 ls2 ws0">55 <span class="_ _1"></span>2988 <span class="_ _1"></span>9577<span class="_ _5"> </span><span class="ff1 fs0 fc2 ls3">vi<span class="_ _1"></span>vo<span class="_ _1"></span>c<span class="_ _1"></span>abl<span class="_ _0"></span>e<span class="_ _4"></span>t<span class="_ _1"></span>v@gmai<span class="_ _1"></span>l<span class="_ _0"></span>.c<span class="_ _1"></span>o<span class="_ _1"></span>m</span></div><div class="t m0 x4 h4 y8 ff2 fs1 fc1 sc0 ls2 ws0">55 <span class="_ _1"></span>5811 <span class="_ _1"></span>3963<span class="_ _5"> </span><span class="ff1 fs0 fc2 ls4">www.vi<span class="_ _1"></span>vocabl<span class="_ _1"></span>e<span class="_ _4"></span>.t<span class="_ _1"></span>v</span></div></div><div class="c x5 y9 w3 h5"><div class="t m0 x6 h3 ya ff1 fs0 fc0 sc0 ls5 ws0">Mes d<span class="_ _0"></span>e fac<span class="_ _0"></span>t<span class="_ _0"></span>u<span class="_ _0"></span>r<span class="_ _0"></span>a<span class="_ _1"></span>c<span class="_ _0"></span>i<span class="_ _2"></span>ó<span class="_ _0"></span>n<span class="_ _0"></span>:</div></div><div class="c x5 yb w3 h5"><div class="t m0 x6 h3 ya ff1 fs0 fc0 sc0 ls6 ws0">Nú<span class="_ _1"></span>m<span class="_ _1"></span>ero<span class="_ _1"></span> <span class="_ _3"></span>d<span class="_ _1"></span>e<span class="_ _3"></span> <span class="_ _4"></span>c<span class="_ _0"></span>l<span class="_ _0"></span>i<span class="_ _0"></span>e<span class="_ _4"></span>n<span class="_ _0"></span>t<span class="_ _1"></span>e<span class="_ _3"></span>:</div></div><div class="c x5 yc w3 h5"><div class="t m0 x7 h3 ya ff1 fs0 fc0 sc0 ls7 ws0">To<span class="_ _0"></span>t<span class="_ _0"></span>al<span class="_ _2"></span> <span class="_ _3"></span>a p<span class="_ _0"></span>aga<span class="_ _1"></span>r<span class="_ _0"></span>:</div></div><div class="c x5 yd w3 h5"><div class="t m0 x8 h3 ya ff1 fs0 fc0 sc0 ls8 ws0">Pa<span class="_ _4"></span>g<span class="_ _4"></span>a<span class="_ _4"></span>r <span class="_ _4"></span>a<span class="_ _4"></span>nte<span class="_ _6"></span>s<span class="_ _4"></span> <span class="_ _6"></span>de<span class="_ _6"></span>:</div></div><div class="c x1 ye w4 h6"><div class="t m0 x9 h4 yf ff2 fs1 fc0 sc0 ls9 ws0">#NOM<span class="_ _4"></span>B<span class="_ _1"></span>R<span class="_ _1"></span>E <span class="_ _1"></span>CL<span class="_ _3"></span>I<span class="_ _3"></span>ENTE</div></div><div class="c xa y10 w5 h7"><div class="t m0 x0 h4 y8 ff1 fs1 fc0 sc0 lsa ws0">IVA<span class="_ _1"></span> <span class="_ _1"></span>16%</div></div><div class="c xa y11 w5 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 lsb ws0">SUBT<span class="_ _4"></span>O<span class="_ _3"></span>T<span class="_ _4"></span>AL</div></div><div class="c xa y12 w5 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 lsc ws0">CA<span class="_ _1"></span>R<span class="_ _2"></span>G<span class="_ _0"></span>O<span class="_ _0"></span>S<span class="_ _2"></span> <span class="_ _0"></span>A<span class="_ _1"></span>DI<span class="_ _0"></span>CI<span class="_ _1"></span>O<span class="_ _0"></span>N<span class="_ _0"></span>A<span class="_ _1"></span>L<span class="_ _1"></span>E<span class="_ _0"></span>S</div></div><div class="c xa y13 w5 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 lsc ws0">CA<span class="_ _1"></span>R<span class="_ _2"></span>G<span class="_ _0"></span>O<span class="_ _0"></span>S<span class="_ _2"></span> <span class="_ _0"></span>DE<span class="_ _0"></span>L<span class="_ _1"></span> <span class="_ _0"></span>ME<span class="_ _0"></span>S</div></div><div class="c xa y14 w6 h6"><div class="t m0 xb h8 y15 ff2 fs2 fc0 sc0 lsd ws0">CO<span class="_ _0"></span>N<span class="_ _2"></span>T<span class="_ _1"></span>A<span class="_ _2"></span>CT<span class="_ _1"></span>O</div></div><div class="c x5 y16 w3 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 ls9 ws0">#(<span class="_ _1"></span>S<span class="_ _0"></span>UB<span class="_ _0"></span>TOT<span class="_ _1"></span>AL)<span class="_ _1"></span>*1.16</div></div><div class="c x5 y17 w3 h7"><div class="t m0 x0 h9 y18 ff1 fs3 fc0 sc0 lse ws0">#C<span class="_ _3"></span>A<span class="_ _1"></span>NTIDA<span class="_ _1"></span>D <span class="_ _1"></span>ES<span class="_ _1"></span>CR<span class="_ _4"></span>IT<span class="_ _1"></span>A</div></div><div class="c xa y17 w5 ha"><div class="t m0 x0 h4 y19 ff1 fs1 fc0 sc0 lsf ws0">TOTAL</div></div><div class="c xa y1a w5 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 lsb ws0">SE<span class="_ _3"></span>RV<span class="_ _4"></span>I<span class="_ _3"></span>C<span class="_ _6"></span>I<span class="_ _4"></span>O<span class="_ _3"></span> A<span class="_ _4"></span>C<span class="_ _6"></span>T<span class="_ _3"></span>UA<span class="_ _4"></span>L</div></div><div class="c x5 y11 w3 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 ls10 ws0">#$S<span class="_ _1"></span>U<span class="_ _1"></span>MA,C<span class="_ _4"></span>M+C<span class="_ _4"></span>A</div></div><div class="c x5 y12 w3 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 ls9 ws0">#$P<span class="_ _3"></span>R<span class="_ _1"></span>ON<span class="_ _1"></span>T<span class="_ _1"></span>O <span class="_ _1"></span>PAG<span class="_ _1"></span>O/<span class="_ _1"></span>R<span class="_ _0"></span>EC<span class="_ _3"></span>ONE<span class="_ _1"></span>XION</div></div><div class="c x5 y10 w3 h7"><div class="t m0 x0 h4 y8 ff1 fs1 fc0 sc0 ls9 ws0">#(<span class="_ _1"></span>S<span class="_ _0"></span>UB<span class="_ _0"></span>TOT<span class="_ _1"></span>AL)<span class="_ _1"></span>*0.16</div></div><div class="c x5 y13 w3 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 ls9 ws0">#M<span class="_ _3"></span>ONT<span class="_ _1"></span>O <span class="_ _1"></span>S<span class="_ _0"></span>IN <span class="_ _1"></span>IV<span class="_ _1"></span>A</div></div><div class="c x5 y1a w3 h7"><div class="t m0 x0 h4 ya ff1 fs1 fc0 sc0 ls9 ws0">#NO<span class="_ _1"></span>M<span class="_ _3"></span>B<span class="_ _1"></span>R<span class="_ _0"></span>E <span class="_ _1"></span>S<span class="_ _0"></span>ER<span class="_ _0"></span>VIC<span class="_ _3"></span>IO</div></div><div class="c x1 y1b w7 h5"><div class="t m0 xc h3 ya ff1 fs0 fc0 sc0 ls0 ws0">#D<span class="_ _0"></span>O<span class="_ _1"></span>MI<span class="_ _0"></span>C<span class="_ _0"></span>I<span class="_ _2"></span>L<span class="_ _0"></span>I<span class="_ _0"></span>O<span class="_ _1"></span>,<span class="_ _2"></span> C<span class="_ _1"></span>A<span class="_ _1"></span>L<span class="_ _2"></span>L<span class="_ _0"></span>E</div></div><div class="c x1 y1c w7 h5"><div class="t m0 xc h3 ya ff1 fs0 fc0 sc0 ls0 ws0">#D<span class="_ _0"></span>O<span class="_ _1"></span>MI<span class="_ _0"></span>C<span class="_ _0"></span>I<span class="_ _2"></span>L<span class="_ _0"></span>I<span class="_ _0"></span>O<span class="_ _1"></span>,<span class="_ _2"></span> C<span class="_ _1"></span>O<span class="_ _1"></span>L<span class="_ _2"></span>ON<span class="_ _0"></span>I<span class="_ _0"></span>A</div></div><div class="c x1 y1d w7 h5"><div class="t m0 xc h3 ya ff1 fs0 fc0 sc0 ls0 ws0">#D<span class="_ _0"></span>O<span class="_ _1"></span>MI<span class="_ _0"></span>C<span class="_ _0"></span>I<span class="_ _2"></span>L<span class="_ _0"></span>I<span class="_ _0"></span>O<span class="_ _1"></span>,<span class="_ _2"></span> MU<span class="_ _1"></span>N<span class="_ _1"></span>I<span class="_ _2"></span>C<span class="_ _1"></span>I<span class="_ _2"></span>P<span class="_ _0"></span>I<span class="_ _0"></span>O<span class="_ _1"></span>,<span class="_ _0"></span> E<span class="_ _1"></span>S<span class="_ _1"></span>T<span class="_ _1"></span>AD<span class="_ _2"></span>O</div></div><div class="c x1 y1e w7 h5"><div class="t m0 xc h3 ya ff1 fs0 fc0 sc0 ls0 ws0">#D<span class="_ _0"></span>O<span class="_ _1"></span>MI<span class="_ _0"></span>C<span class="_ _0"></span>I<span class="_ _2"></span>L<span class="_ _0"></span>I<span class="_ _0"></span>O<span class="_ _1"></span>,<span class="_ _2"></span> C<span class="_ _1"></span>P</div></div><div class="c xa y1f w6 hb"><div class="t m0 xa hc y20 ff1 fs4 fc0 sc0 ls11 ws0">ES<span class="_ _4"></span>TA<span class="_ _4"></span>DO<span class="_ _3"></span> <span class="_ _3"></span>D<span class="_ _3"></span>E <span class="_ _3"></span>CU<span class="_ _1"></span>EN<span class="_ _1"></span>TA</div></div><div class="c x5 y21 w8 hd"><div class="t m0 xd h3 y19 ff1 fs0 fc0 sc0 ls12 ws0">BA<span class="_ _4"></span>NCO:</div></div><div class="c xe y22 w9 h5"><div class="t m0 x0 h3 ya ff1 fs0 fc0 sc0 ls13 ws0">0724 <span class="_ _6"></span>2001 <span class="_ _6"></span>0079 <span class="_ _6"></span>5867 <span class="_ _6"></span>97</div></div><div class="c x5 y23 wa h5"><div class="t m0 xf h4 ya ff1 fs1 fc0 sc0 ls14 ws0">RE<span class="_ _3"></span>A<span class="_ _4"></span>L<span class="_ _4"></span>I<span class="_ _3"></span>ZA<span class="_ _4"></span> T<span class="_ _4"></span>U P<span class="_ _6"></span>A<span class="_ _3"></span>GO<span class="_ _4"></span> M<span class="_ _6"></span>E<span class="_ _3"></span>D<span class="_ _6"></span>I<span class="_ _4"></span>A<span class="_ _3"></span>NT<span class="_ _4"></span>E<span class="_ _3"></span> </div></div><div class="c x5 y24 wa h5"><div class="t m0 x10 h4 ya ff2 fs1 fc3 sc0 ls15 ws0">TA<span class="_ _3"></span>NSF<span class="_ _0"></span>ER<span class="_ _1"></span>ENCI<span class="_ _4"></span>A INTERB<span class="_ _1"></span>A<span class="_ _3"></span>NC<span class="_ _4"></span>ARIA</div></div><div class="c xe y25 wb h6"><div class="t m0 xc h4 yf ff2 fs1 fc4 sc0 ls16 ws0">PÁG<span class="_ _0"></span>I<span class="_ _1"></span>N<span class="_ _0"></span>A <span class="_ _0"></span>W<span class="_ _0"></span>E<span class="_ _0"></span>B</div></div><div class="c x11 y25 wc h6"><div class="t m0 xc h4 yf ff2 fs1 fc4 sc0 ls15 ws0">TELÉF<span class="_ _1"></span>ONO</div></div><div class="c x11 y26 wc h6"><div class="t m0 xc h4 yf ff2 fs1 fc4 sc0 ls17 ws0">WH<span class="_ _1"></span>A<span class="_ _3"></span>TSA<span class="_ _3"></span>P<span class="_ _4"></span>P</div></div><div class="c xe y26 wb h6"><div class="t m0 x12 h4 yf ff2 fs1 fc4 sc0 ls18 ws0">COR<span class="_ _0"></span>R<span class="_ _0"></span>E<span class="_ _0"></span>O</div></div></div><div class="pi" data-data='{"ctm":[0.500000,0.000000,0.000000,0.500000,0.000000,0.000000]}'></div></div>
+</div>
+<div class="loading-indicator">
+<img alt="" src="pdf2htmlEX-64x64.png"/>
+</div>
+</body>
+</html>
